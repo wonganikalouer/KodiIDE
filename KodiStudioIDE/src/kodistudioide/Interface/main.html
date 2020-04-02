@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Kodi Studio IDE</title>
+	<script type="text/javascript" src="js/gslib_client.js"></script>
+	<script type="text/javascript" src="js/logic.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/index.css">
+</head>
+<body>
+	
+<div class="top">
+	<p>File</p>
+	<p>Edit</p>
+	<p>Project</p>
+	<p>Tools</p>
+	<p>Preferences</p>
+	<p>Help</p>
+</div>
+
+
+<div class="tool_builder">
+
+		<h3 id="t" class="t2">Properties</h3>
+		<div id="properties">
+			<label>variable name</label>
+			<input type="text" id="propertyID" onkeyup="updateElementID()">
+			<label>Text</label>
+			<input type="text" id="propertyText" onkeyup="updateText()">
+			<hr>
+			<label>Width</label>
+			<select onchange="updateWidth()" id="w" style="cursor: default;">
+				<option>Fill Parent</option>
+				<option active>Wrap Text</option>
+				<option>Other</option>
+			</select>
+			<input type="text" id="ow" style="float: left;width: 0px;margin-top: 10px;overflow: hidden;" placeholder="width (px)" onkeyup="updateWidthOther()">
+
+			<label>Height</label>
+			<select onchange="updateHeight()" id="h" style="cursor: default;">
+				<option>Fill Parent</option>
+				<option active>Wrap Text</option>
+				<option>Other</option>
+			</select>
+			<input type="text" id="oh" style="float: left;width: 0px;margin-top: 10px;overflow: hidden;" placeholder="width (px)" onkeyup="updateHeightOther()">
+			<hr>
+			<label>Background Color</label>
+			<input type="color" id="bgColor" onchange="changeElementBG()" style="width: 60px;height: 50px;cursor: pointer;">
+			<label>Text Color</label>
+			<input type="color" id="fColor" onchange="changeElementColor()" style="width: 60px;height: 50px;cursor: pointer;">
+			<hr>
+			<label>Text alignment</label>
+			<select id="ta" style="cursor: default;">
+				<option>center</option>
+				<option>left</option>
+				<option>right</option>
+				<option>justified</option>
+			</select>
+		</div>
+	</div> 
+
+<div class="content">
+	<img src="img/drag.png" id="drag_icon">
+	<div class="app_builder">
+		<h3 id="t">App Tools</h3>
+		<div id="tools">
+			<button>Button 1</button>
+			<h1>Heading Element</h1>
+			<h2>Heading Element</h2>
+			<h3>Heading Element</h3>
+			<input type="text" value="input">
+			<hr>
+		</div>
+	</div> 
+	<div class="builder_">
+		<div class="network_bar"></div>
+		<!-- Main Editing tool is the app, prety much hardcore language lies here -->
+		<div class="app" ></div>
+		<div class="hardwareBar"></div>
+	</div>	
+</div>
+</body>
+</html>

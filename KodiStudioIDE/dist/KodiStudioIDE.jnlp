@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<jnlp spec="1.0" xmlns:jfx="http://javafx.com" href="KodiStudioIDE.jnlp">
+  <information>
+    <title>KodiStudioIDE</title>
+    <vendor>acer</vendor>
+    <description>null</description>
+    <offline-allowed/>
+  </information>
+  <resources>
+    <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
+    <jar href="lib\KodiPreloader.jar" size="2869" download="progress" />
+    <jar href="KodiStudioIDE.jar" size="16556" download="eager" />
+    <jar href="lib\KodiStudioEngine.jar" size="1692" download="eager" />
+  </resources>
+  <applet-desc  width="800" height="600" main-class="com.javafx.main.NoJavaFXFallback"  name="KodiStudioIDE" >
+    <param name="requiredFXVersion" value="8.0+"/>
+  </applet-desc>
+  <jfx:javafx-desc  width="800" height="600" main-class="kodistudioide.KodiStudioIDE"  name="KodiStudioIDE"  preloader-class="kodipreloader.KodiPreloader"/>
+  <update check="always"/>
+</jnlp>
